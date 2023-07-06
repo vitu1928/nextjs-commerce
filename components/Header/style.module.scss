@@ -1,10 +1,18 @@
-@use 'mixins';
+@use '../../styles/mixins';
 
 .header {
   @include mixins.centered;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.7vw;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 0 0 #000;
+  background-color: rgba(255,255,255,0);
+  transition: background-color .3s linear,box-shadow .3s linear;
+  padding: 10px;
 
   a {
     font-weight: bold;

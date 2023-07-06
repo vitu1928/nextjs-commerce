@@ -1,0 +1,8 @@
+@use '../../styles/mixins';
+
+.product-list {
+  @include mixins.centered;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

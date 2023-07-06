@@ -1,8 +1,9 @@
-@use 'mixins';
+@use '../../styles/mixins';
 
 .background-image {
   position: absolute;
-  opacity: 0.02;
+  z-index: -1;
+  opacity: 0.04;
   left: -10vw;
   top: -10vh;
   height: 75vh;
