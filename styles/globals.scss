@@ -1,7 +1,9 @@
 @use 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
-* {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
@@ -10,6 +12,38 @@ html, body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  transition: background-color var(--speed) var(--easing);
+  background-color: var(--bg);
+  color: var(--color)
+}
+
+:root {
+	--slide-ease: cubic-bezier(.4,-0.3,.6,1.3);
+	--easing: var(--slide-ease);
+	--speed: 0.5s;
+	--width: clamp(160px, 15vmin, 400px);
+	--ar: 8 / 3;
+	--ray: hsl(0 0% 100% / 0.5);
+	--sun: hsl(47, 91%, 58%);
+	--moon: hsl(212, 13%, 82%);
+	--crater: hsl(221, 16%, 68%);
+	--bg: hsl(219, 30%, 88%);
+	--bear-speed: 10s;
+	--color: hsl(219 30% 20%);
+}
+
+[data-dark-mode=true] {
+	--bg: hsl(219, 30%, 12%);
+	--color: hsl(219 30% 98%);
+}
+
+[type=checkbox] {
+	accent-color: var(--color);
+	transition: accent-color var(--speed) var(--easing);
+}
+
+[aria-pressed=true] {
+	--dark: 1;
 }
 
 .app {
@@ -26,7 +60,7 @@ html, body {
 
 .background-image {
   position: absolute;
-  opacity: 0.02;
+  opacity: 0.04;
   left: -10vw;
   top: -10vh;
   height: 75vh;
@@ -61,7 +95,7 @@ html, body {
 
 html:not([data-scroll="0"]) header {
   box-shadow: 0 1px 20px 0 #0000002e;
-  background-color: #fff;
+  background-color: var(--bg);
   position: fixed;
 }
 
@@ -70,3 +104,5 @@ html:not([data-scroll="0"]) header {
   display: flex;
   grid-area: button;
 }
+
+

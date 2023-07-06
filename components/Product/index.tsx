@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import styles from './style.module.scss';
+import { useEffect } from 'react';
+import confetti from 'js-confetti';
+
 
 export interface IProduct {
     id: string
@@ -7,10 +10,14 @@ export interface IProduct {
     price: number
     url: string
     description: string
+    emoji: string
     image: StaticImageData
 }
-
 const Product = ({ product }: { product: IProduct}) => {
+    const handleConfetti = (emoji: string) => new confetti().addConfetti({
+        emojis: [emoji]
+    })
+    
     return (
         <li className={styles.product}>
             <article>
@@ -18,16 +25,18 @@ const Product = ({ product }: { product: IProduct}) => {
                     <h2 className={styles.product__title}>{product.name}</h2>
                     <p className={styles.product__description}>{product.description}</p>
                     <div className="product__price-button-container">
-                        <div className={styles.product__price}>${product.price.toFixed(2)}</div>
+                        <div className={styles.product__price}>R${product.price.toFixed(2)}</div>
                         <button
-                            className={`snipcart-add-item ${styles.product__button}`}
-                            data-item-id={product.id}
-                            data-item-name={product.name}
-                            data-item-price={product.price}
-                            data-item-url={product.url}
-                            data-item-image={product.image.src}>
-                            Adicionar ao carrinho
-                        </button>
+                                onClick={() => handleConfetti(product.emoji)}
+                                className={`snipcart-add-item ${styles.product__button}`}
+                                data-item-id={product.id}
+                                data-item-name={product.name}
+                                data-item-price={product.price}
+                                data-item-url={product.url}
+                                data-item-image={product.image.src}>
+                                Adicionar ao carrinho
+                            </button>
+                        
                     </div>
                 </div>
                 <div className={styles.image}>

@@ -21,7 +21,7 @@
 
   article {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; 
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-around;
@@ -98,7 +98,7 @@
       position: relative;
 
       cursor: pointer;
-      
+
       &:hover {
         transition: 0.2s all;
 
