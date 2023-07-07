@@ -23,7 +23,7 @@
   }
 
   a > span {
-    color: mixins.$color-purple;
+    color: var(--color);
     margin-left: 10px;
   }
 

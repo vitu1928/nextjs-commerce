@@ -15,6 +15,7 @@
   margin-bottom: 100px;
   margin-top: 25px;
   text-align: center;
+  font-size: 20px;
 
   h3 {
     font-size: 20px;
@@ -32,5 +33,11 @@
     }
     margin: 0;
     color: mixins.$color-purple;
+  }
+  a {
+    background: linear-gradient(90deg,#7242aa,#c92ca1,#de446c,#e36d43,#facb69);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
   }
 }

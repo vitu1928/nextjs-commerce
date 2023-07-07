@@ -6,6 +6,7 @@
 *:before {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
 }
 
 html, body {
@@ -14,7 +15,7 @@ html, body {
   padding: 0;
   transition: background-color var(--speed) var(--easing);
   background-color: var(--bg);
-  color: var(--color)
+  color: var(--color);
 }
 
 :root {

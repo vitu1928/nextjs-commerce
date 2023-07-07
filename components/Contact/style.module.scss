@@ -5,6 +5,7 @@
   background-color: mixins.$color-light-grey;
   padding-top: 100px;
   padding-bottom: 100px;
+  color: hsl(219 30% 20%);
   &__title {
     font-size: 36px;
 
@@ -26,13 +27,14 @@
     border-radius: 4px;
     padding: 12px 20px;
     border: none;
-    background-color: mixins.$color-dark;
+    background: linear-gradient(90deg,#7242aa,#c92ca1,#de446c,#e36d43,#facb69);
     color: white;
     position: relative;
     z-index: 99;
 
     &:hover {
       transition: 0.2s all;
+      cursor: pointer;
       &:before {
         transform: scale(1.15, 1.4);
       }
@@ -41,7 +43,7 @@
     &:before {
       content: ' ';
       position: absolute;
-      background-color: mixins.$color-dark;
+      background: linear-gradient(90deg,#7242aa,#c92ca1,#de446c,#e36d43,#facb69);
       top: 0;
       left: 0;
       border-radius: 4px;

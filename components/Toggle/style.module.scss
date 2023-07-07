@@ -41,7 +41,7 @@ $outline-color_1: transparent;
 .toggle {
 	-webkit-tap-highlight-color: transparent;
 	width: var(--width);
-	z-index: 10;
+	z-index: 2;
 	will-change: transform;
 	isolation: isolate;
 	transform: translate3d(0, 0, 0);
@@ -128,6 +128,7 @@ $outline-color_1: transparent;
 	transition: translate calc( var(--speed) + ((1 - var(--dark, 0)) * ((var(--bear-speed) * 0.5) - var(--speed)))) calc((var(--bear-speed) * 0.5) * ((1 - var(--dark, 0)) * 0.4)) linear;
 	translate: calc( (0 - (1 - var(--dark, 0))) * (var(--width) + 100%) ) calc( (0 - (1 - var(--dark, 0))) * (200%) );
 }
+
 .toggle__star {
 	height: 100%;
 	aspect-ratio: 1;
@@ -135,6 +136,7 @@ $outline-color_1: transparent;
 	position: relative;
 	transition: translate var(--speed) var(--easing);
 	translate: calc((var(--dark, 0) * -10%) + 5%) 0;
+
 	&:before {
 		content: "";
 		z-index: -1;
@@ -148,6 +150,7 @@ $outline-color_1: transparent;
 		transition: translate var(--speed) var(--easing);
 		translate: calc( (50 - (var(--dark, 0) * 4)) * -1% ) -50%;
 	}
+
 	&:after {
 		content: "";
 		position: absolute;
