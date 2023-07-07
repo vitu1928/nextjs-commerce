@@ -1,20 +1,10 @@
 import Image from 'next/image'
 import styles from './style.module.scss';
-import { useEffect } from 'react';
 import confetti from 'js-confetti';
 
 
-export interface IProduct {
-    id: string
-    name: string
-    price: number
-    url: string
-    description: string
-    emoji: string
-    image: StaticImageData
-}
-const Product = ({ product }: { product: IProduct}) => {
-    const handleConfetti = (emoji: string) => new confetti().addConfetti({
+const Product = ({ product }) => {
+    const handleConfetti = (emoji) => new confetti().addConfetti({
         emojis: [emoji]
     })
     

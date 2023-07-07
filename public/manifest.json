@@ -1,0 +1,24 @@
+{
+    "name": "Cururu Elegante",
+    "short_name": "Cururu",
+    "description": "Site de vendas do Cururu Elegante, acessórios brincantes 🙋🏻‍♀️ Personalizados por @aylatorrens e @vanessa_torrens",
+    "scope": "/",
+    "start_url": "/",
+    "orientation": "portrait",  
+    "purpose": "any maskable",
+    "icons": [
+        {
+            "src": "Images/Icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Images/Icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#C5C471",
+    "background_color": "#D7DEEA",
+    "display": "standalone"
+}

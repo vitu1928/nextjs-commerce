@@ -7,9 +7,9 @@ import Toogle from "../Toggle"
 
 export default function Header() {
     useEffect(() => {
-        const debounce = (fn: Function) => {
-            let frame: number;
-            return (...params: any) => {
+        const debounce = (fn) => {
+            let frame;
+            return (...params) => {
                 if (frame) cancelAnimationFrame(frame);
                 frame = requestAnimationFrame(() => fn(...params))
             }

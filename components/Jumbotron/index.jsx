@@ -16,8 +16,19 @@ const Jumbotron = () => {
                 🐸 Acessórios brincantes
                 📩 Encomendas via DM
                 🙋🏻‍♀️ Personalizados por
-                <a href="https://www.instagram.com/aylatorrens/" target='_blank'> @aylatorrens</a> e 
-                <a href="https://www.instagram.com/vanessa_torrens/" target='_blank'> @vanessa_torrens</a>
+                <a 
+                    href="https://www.instagram.com/aylatorrens/"
+                    target='_blank'
+                    rel='noreferrer'
+                > @aylatorrens
+                </a> e 
+                <a 
+                    href="https://www.instagram.com/vanessa_torrens/"
+                    target='_blank'
+                    rel='noreferrer'
+
+                > @vanessa_torrens
+                </a>
              </p>
         </div>
     </>)

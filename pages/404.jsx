@@ -59,7 +59,7 @@ export default function NotFound() {
                   Uh oh! Parece que você se perdeu. <br />
                   Volte a página inicial!
                 </p>
-                <button style={{ border: 0}}><Link href="/">Tô indo!</Link></button>
+                <button style={{ border: 0}}><Link href="/" rel="preload">Tô indo!</Link></button>
               </article>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./style.module.scss";
+import Image from "next/image";
 
 export default function Toggle() {
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function Toggle() {
                     </svg>
                     <span aria-hidden="true" className={styles.pilot__container}>
                         <span className={styles['pilot-bear']}>
-                            <img
+                            <Image
                                 src="https://assets.codepen.io/605876/pilot-bear.svg"
                                 alt="pilot-bear"
                                 className={styles.pilot}

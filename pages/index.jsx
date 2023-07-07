@@ -5,19 +5,13 @@ import Script from 'next/script';
 import Contact from "../components/Contact";
 import Jumbotron from "../components/Jumbotron";
 import ProductList from "../components/ProductList";
-import { IProduct } from "../components/Product";
 
 import BrincosAbacate from "../public/Images/Products/BrincosAbacate.jpg"
 import BrincosLaranjinhha from "../public/Images/Products/BrincosLaranjinha.jpg"
 import BrincosMargarida from "../public/Images/Products/BrincosMargarida.jpg"
 import BrincosLua from "../public/Images/Products/BrincosLua.jpg"
 
-
-interface IProductListProps {
-    products: IProduct[]
-}
-
-export default function Home({products}: IProductListProps) {
+export default function Home({products}) {
     return (
         <>
             <Head>
@@ -37,7 +31,7 @@ export default function Home({products}: IProductListProps) {
     )
 }
 
-export const products: IProduct[] = [
+export const products = [
     {
         id: "abacate",
         name: "Abacate Elegante",
@@ -76,7 +70,7 @@ export const products: IProduct[] = [
     }
 ]
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
 
     return {
         props: {
