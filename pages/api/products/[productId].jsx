@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import { NextApiRequest, NextApiResponse } from "next";
-import { IProduct } from "../../../components/Product";
 import { products } from "../../index";
 
 /**
@@ -16,15 +15,15 @@ export default function handler(req, res) {
         return ;
     }
     /**
-     * @param {Object} ISnipcartProduct 
-     * @param {string} ISnipcartProduct.id
-     * @param {string} ISnipcartProduct.name
-     * @param {number} ISnipcartProduct.price
-     * @param {string} ISnipcartProduct.url
-     * @param {string} ISnipcartProduct.description
-     * @param {string} ISnipcartProduct.image
+     * @param {Object} IcartProduct 
+     * @param {string} IcartProduct.id
+     * @param {string} IcartProduct.name
+     * @param {number} IcartProduct.price
+     * @param {string} IcartProduct.url
+     * @param {string} IcartProduct.description
+     * @param {string} IcartProduct.image
      */
-    const snipcartProduct  = {...product, image: product?.image.src ?? ""} 
+    const cartProduct  = {...product, image: product?.image.src ?? ""} 
 
-    res.status(200).json(snipcartProduct);
+    res.status(200).json(cartProduct);
 }

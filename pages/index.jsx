@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
 import Script from 'next/script';
 
@@ -16,17 +15,12 @@ export default function Home({products}) {
         <>
             <Head>
                 <title>Cururu Elegante</title>
-                <link rel="preconnect" href="https://app.snipcart.com"/>
-                <link rel="preconnect" href="https://cdn.snipcart.com"/>
-                <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/>
             </Head>
             <main className="main">
                 <Jumbotron />
                 <ProductList products={products}/>
                 <Contact/>
             </main>
-            <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"/>
-            <div hidden id="snipcart" data-api-key="OWNlZTNlYmItZTU5OS00MmI4LThjOTAtMjY0NzAyYmI2ODAxNjM3NjIyMjY3MDMxMTIzMzUx"></div>
         </>
     )
 }

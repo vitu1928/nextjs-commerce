@@ -1,9 +1,9 @@
-import "../styles/globals.scss";
-import "../styles/404.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Head from "next/head";
 
+import "../styles/globals.scss";
+import "../styles/404.scss";
 
 function MyApp({ Component, pageProps }) {
     return <div className="app">

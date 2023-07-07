@@ -2,7 +2,6 @@ import Image from 'next/image'
 import styles from './style.module.scss';
 import confetti from 'js-confetti';
 
-
 const Product = ({ product }) => {
     const handleConfetti = (emoji) => new confetti().addConfetti({
         emojis: [emoji]
@@ -18,7 +17,7 @@ const Product = ({ product }) => {
                         <div className={styles.product__price}>R${product.price.toFixed(2)}</div>
                         <button
                                 onClick={() => handleConfetti(product.emoji)}
-                                className={`snipcart-add-item ${styles.product__button}`}
+                                // className={`snipcart-add-item ${styles.product__button}`}
                                 data-item-id={product.id}
                                 data-item-name={product.name}
                                 data-item-price={product.price}

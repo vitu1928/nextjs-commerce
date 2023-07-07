@@ -6,7 +6,7 @@
   padding-top: 100px;
   padding-bottom: 100px;
   color: hsl(219 30% 20%);
-  
+
   &__title {
     font-size: 36px;
 
@@ -31,7 +31,7 @@
     background: linear-gradient(90deg,#7242aa,#c92ca1,#de446c,#e36d43,#facb69);
     color: white;
     position: relative;
-    z-index: 99;
+    z-index: 9;
 
     &:hover {
       transition: 0.2s all;
